@@ -6,11 +6,8 @@ import { HospitalIcon, MenuIcon, XIcon, SearchIcon } from './IconComponents';
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-    const [isSearchOpen, setIsSearchOpen] = useState(false);
-    const [searchQuery, setSearchQuery] = useState('');
     const navigate = useNavigate();
     const headerRef = useRef<HTMLElement>(null);
-    const searchInputRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         const handleEscape = (event: KeyboardEvent) => {
@@ -35,21 +32,6 @@ const Header: React.FC = () => {
         };
     }, []);
 
-    useEffect(() => {
-        if (isSearchOpen && searchInputRef.current) {
-            setTimeout(() => searchInputRef.current?.focus(), 300); // Wait for transition
-        }
-    }, [isSearchOpen]);
-
-    const handleSearchSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        if (searchQuery.trim()) {
-            navigate(`/find-a-doctor?q=${encodeURIComponent(searchQuery.trim())}`);
-            setSearchQuery('');
-            setIsSearchOpen(false);
-            setIsMenuOpen(false);
-        }
-    };
 
     const handleMobileLinkClick = () => {
         setIsMenuOpen(false);
@@ -85,29 +67,7 @@ const Header: React.FC = () => {
                         ))}
                     </nav>
 
-                    <div className="hidden md:flex items-center space-x-4">
-                        <div className="flex items-center">
-                            <form onSubmit={handleSearchSubmit} role="search">
-                                <label htmlFor="desktop-search" className="sr-only">Search doctors, specialties...</label>
-                                <input
-                                    ref={searchInputRef}
-                                    id="desktop-search"
-                                    type="search"
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
-                                    placeholder="Search..."
-                                    className={`bg-accent text-primary placeholder-slate rounded-full px-4 py-2 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-secondary ${isSearchOpen ? 'w-60 opacity-100' : 'w-0 opacity-0'}`}
-                                    aria-hidden={!isSearchOpen}
-                                />
-                            </form>
-                            <button
-                                onClick={() => setIsSearchOpen(!isSearchOpen)}
-                                className="p-2 rounded-full text-slate-light hover:text-secondary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-light focus-visible:ring-offset-primary"
-                                aria-label={isSearchOpen ? "Close search bar" : "Open search bar"}
-                            >
-                                {isSearchOpen ? <XIcon className="h-5 w-5" /> : <SearchIcon className="h-5 w-5" />}
-                            </button>
-                        </div>
+                    <div className="hidden md:flex items-center">
                         <Link
                             to="/appointments"
                             className="bg-secondary text-white font-bold py-2 px-4 rounded-md hover:bg-secondary/90 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-glow-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-light focus-visible:ring-offset-primary active:scale-95 text-sm"
@@ -132,22 +92,6 @@ const Header: React.FC = () => {
 
             {/* Mobile Menu */}
             <div className={`md:hidden bg-primary absolute w-full shadow-xl transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-                <div className="p-4 border-b border-primary-light">
-                    <form onSubmit={handleSearchSubmit} role="search" className="flex">
-                        <label htmlFor="mobile-search" className="sr-only">Search...</label>
-                        <input
-                            id="mobile-search"
-                            type="search"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            placeholder="Search doctors, specialties..."
-                            className="flex-1 bg-accent text-primary placeholder-slate rounded-l-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-secondary"
-                        />
-                        <button type="submit" className="bg-secondary text-white px-4 rounded-r-full hover:bg-secondary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-secondary focus-visible:ring-offset-primary">
-                            <SearchIcon className="h-5 w-5" />
-                        </button>
-                    </form>
-                </div>
                 <nav className="flex flex-col items-center space-y-1 py-4" aria-label="Mobile navigation">
                     {NAV_LINKS.map((link) => (
                         <div key={link.name} className="w-full text-center px-4">
