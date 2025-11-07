@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <PageWrapper
+        <PageWrapper pageType="contact"
             title="Get In Touch"
             subtitle="We're here to help. Whether you have a question, need to schedule an appointment, or require emergency assistance, find the right way to reach us below."
         >

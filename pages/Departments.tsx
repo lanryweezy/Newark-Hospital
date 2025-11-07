@@ -19,7 +19,7 @@ const Specialties: React.FC = () => {
     const categoryOrder = ['Core Medical & Surgical', 'Diagnostic & Therapeutic', 'Specialized Care Centers'];
 
     return (
-        <PageWrapper title="Our Specialties" subtitle="Explore our comprehensive range of specialized medical services, all equipped with state-of-the-art technology and staffed by expert professionals.">
+        <PageWrapper title="Our Specialties" subtitle="Explore our comprehensive range of specialized medical services, all equipped with state-of-the-art technology and staffed by expert professionals." pageType="medical">
             {/* Hero section removed - now handled by PageWrapper */}
             <div className="space-y-16">
                 {categoryOrder.map(category => (

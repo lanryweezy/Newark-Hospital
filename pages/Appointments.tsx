@@ -296,7 +296,7 @@ const Appointments: React.FC = () => {
     };
 
     return (
-        <PageWrapper title="Book an Appointment" subtitle="Seamlessly schedule your visit with our specialists. Your path to better health starts here.">
+        <PageWrapper title="Book an Appointment" subtitle="Seamlessly schedule your visit with our specialists. Your path to better health starts here." pageType="medical">
             <div className="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-xl">
                 {bookingStatus === 'success' ? (
                     <div className="text-center animate-fade-in-up">

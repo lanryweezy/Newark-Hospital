@@ -301,7 +301,7 @@ const PatientPortal: React.FC = () => {
 
     if (!isLoggedIn || !userData) {
         return (
-            <PageWrapper title="Patient Portal" subtitle="Access your medical records, view test results, and manage your appointments securely online.">
+            <PageWrapper title="Patient Portal" subtitle="Access your medical records, view test results, and manage your appointments securely online." pageType="patient">
                 <div className="max-w-md mx-auto bg-white p-8 md:p-12 rounded-lg shadow-xl">
                     <h2 className="text-2xl font-bold text-primary text-center mb-6">Portal Login</h2>
                     {loginError && (
@@ -331,7 +331,7 @@ const PatientPortal: React.FC = () => {
     const sortedMessages = [...userData.messages].sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
 
     return (
-        <PageWrapper title={`Welcome, ${userData.user.name}`} subtitle={`Patient ID: ${userData.user.patientId}`}>
+        <PageWrapper title={`Welcome, ${userData.user.name}`} subtitle={`Patient ID: ${userData.user.patientId}`} pageType="patient">
             <div className="max-w-7xl mx-auto">
                  {portalError && (
                     <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6 relative" role="alert">

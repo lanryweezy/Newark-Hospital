@@ -84,7 +84,7 @@ const FindDoctor: React.FC = () => {
     });
 
     return (
-        <PageWrapper title="Find a Doctor" subtitle="Search our directory of world-class physicians and specialists to find the right care for you.">
+        <PageWrapper title="Find a Doctor" subtitle="Search our directory of world-class physicians and specialists to find the right care for you." pageType="medical">
             {/* Hero section removed - now handled by PageWrapper */}
             <div className="mb-12 bg-white p-6 rounded-xl shadow-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -116,7 +116,7 @@ const About: React.FC = () => {
     };
 
     return (
-        <PageWrapper
+        <PageWrapper pageType="admin"
             title="About Newark Hospital"
             subtitle="Pioneering the future of healthcare in Nigeria with a commitment to excellence, compassion, and innovation."
         >

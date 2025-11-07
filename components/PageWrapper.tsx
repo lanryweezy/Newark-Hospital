@@ -4,14 +4,32 @@ interface PageWrapperProps {
     title: string;
     subtitle?: string;
     children: React.ReactNode;
+    pageType?: 'default' | 'medical' | 'patient' | 'contact' | 'admin';
 }
 
-const PageWrapper: React.FC<PageWrapperProps> = ({ title, subtitle, children }) => {
+const PageWrapper: React.FC<PageWrapperProps> = ({ title, subtitle, children, pageType = 'default' }) => {
+    // Define different images for different page types
+    const getImageUrl = () => {
+        switch(pageType) {
+            case 'medical':
+                return "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80";
+            case 'patient':
+                return "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80";
+            case 'contact':
+                return "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80";
+            case 'admin':
+                return "https://images.unsplash.com/photo-1519491338542-53ed369d3f28?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80";
+            case 'default':
+            default:
+                return "https://images.unsplash.com/photo-1519491338542-53ed369d3f28?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80";
+        }
+    };
+
     return (
         <div className="bg-accent animate-page-fade-in">
             <header 
                 className="relative bg-cover bg-center border-b border-primary-lightest/20"
-                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1519491338542-53ed369d3f28?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')" }}
+                style={{ backgroundImage: `url('${getImageUrl()}')` }}
             >
                 {/* Overlay for readability */}
                 <div className="absolute inset-0 bg-primary/70"></div>
