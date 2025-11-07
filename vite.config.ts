@@ -38,6 +38,7 @@ export default defineConfig(({ mode }) => {
           }
         }
       },
+      base: './',
       optimizeDeps: {
         include: ['react', 'react-dom', 'react-router-dom', '@google/genai']
       }
