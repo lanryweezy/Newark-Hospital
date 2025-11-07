@@ -84,51 +84,55 @@ const Home: React.FC = () => {
                 title="Our Core Specialties"
                 description="We provide a wide range of advanced medical specialties to meet the needs of our diverse population."
             >
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {SPECIALTIES_DATA.slice(0, 6).map((specialty, index) => (
                         <AnimatedBlock key={specialty.name} className="reveal group" style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}>
-                            <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full border border-gray-100">
-                                <div className="h-48 overflow-hidden">
+                            <article className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full border border-gray-100">
+                                <div className="relative h-48 overflow-hidden">
                                     <img
                                         src={specialty.imageUrl}
                                         alt={specialty.name}
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
+                                    <div className="absolute top-4 right-4 bg-secondary/80 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                                        {specialty.category}
+                                    </div>
                                 </div>
                                 <div className="p-6 flex flex-col flex-grow">
                                     <div className="flex items-start mb-4">
                                         <div className="bg-secondary/10 p-3 rounded-lg mr-4 flex-shrink-0">
                                             <specialty.icon className="h-8 w-8 text-secondary" aria-hidden="true" />
                                         </div>
-                                        <h3 className="text-xl font-bold text-primary group-hover:text-secondary transition-colors duration-300">{specialty.name}</h3>
+                                        <div>
+                                            <h3 className="text-xl font-bold text-primary group-hover:text-secondary transition-colors duration-300">{specialty.name}</h3>
+                                            <p className="text-sm text-slate-light mt-1">{specialty.description}</p>
+                                        </div>
                                     </div>
-                                    <p className="text-slate mb-6 flex-grow">{specialty.description}</p>
                                     
                                     <div className="mt-auto pt-4 border-t border-gray-100">
-                                        <h4 className="font-semibold text-secondary mb-3 text-lg">Services:</h4>
+                                        <h4 className="font-semibold text-secondary mb-3 text-base">Key Services:</h4>
                                         <ul className="space-y-2 max-h-32 overflow-y-auto pr-2">
-                                            {specialty.services.slice(0, 4).map((service, idx) => (
+                                            {specialty.services.slice(0, 3).map((service, idx) => (
                                                 <li key={idx} className="flex items-start text-slate">
-                                                    <span className="text-secondary mr-2.5 mt-1 flex-shrink-0">•</span>
-                                                    <span className="text-slate-dark">{service}</span>
+                                                    <span className="text-secondary mr-2 mt-1 flex-shrink-0">✓</span>
+                                                    <span className="text-slate-dark text-sm">{service}</span>
                                                 </li>
                                             ))}
-                                            {specialty.services.length > 4 && (
-                                                <li className="text-sm text-secondary font-medium mt-2 flex items-center">
-                                                    <span className="mr-2">•</span>
-                                                    <span>+ {specialty.services.length - 4} more services</span>
+                                            {specialty.services.length > 3 && (
+                                                <li className="text-sm text-secondary font-medium mt-2">
+                                                    + {specialty.services.length - 3} more services
                                                 </li>
                                             )}
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </AnimatedBlock>
                     ))}
                 </div>
                 <div className="text-center mt-12">
                     <Link to="/specialties" className="inline-flex items-center bg-primary text-white font-bold py-3.5 px-8 rounded-lg hover:bg-primary-light transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-light hover:shadow-xl hover:shadow-primary/25 active:scale-95 min-w-[220px]">
-                        View All Specialties <span className="ml-2.5">→</span>
+                        View All Specialties <span className="ml-2.5 text-lg">→</span>
                     </Link>
                 </div>
             </HomeSection>

@@ -58,7 +58,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'Comprehensive care for women at all stages of life, from maternity services to specialized gynecological treatments.',
         icon: BabyIcon,
         services: ['Maternity Care', 'Labor & Delivery', 'Gynecological Surgery', 'Family Planning'],
-        imageUrl: 'https://images.unsplash.com/photo-1584438784923-565f208d7e18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1591348278998-0d23a9d4a3cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
         category: 'Core Medical & Surgical',
     },
     {
@@ -74,7 +74,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'Specialized care for musculoskeletal conditions, including joint replacement, sports injuries, and trauma surgery.',
         icon: BoneIcon,
         services: ['Joint Replacement', 'Sports Medicine', 'Spine Surgery', 'Trauma & Fracture Care'],
-        imageUrl: 'https://images.unsplash.com/photo-1516035069371-29a5f0b3c4d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
         category: 'Core Medical & Surgical',
     },
     {
