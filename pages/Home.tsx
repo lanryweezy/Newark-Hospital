@@ -100,21 +100,24 @@ const Home: React.FC = () => {
                                         <div className="bg-secondary/10 p-3 rounded-lg mr-4 flex-shrink-0">
                                             <specialty.icon className="h-8 w-8 text-secondary" aria-hidden="true" />
                                         </div>
-                                        <h3 className="text-xl font-bold text-primary">{specialty.name}</h3>
+                                        <h3 className="text-xl font-bold text-primary group-hover:text-secondary transition-colors duration-300">{specialty.name}</h3>
                                     </div>
-                                    <p className="text-slate flex-grow mb-6">{specialty.description}</p>
+                                    <p className="text-slate mb-6 flex-grow">{specialty.description}</p>
                                     
                                     <div className="mt-auto pt-4 border-t border-gray-100">
-                                        <h4 className="font-semibold text-secondary mb-2">Services:</h4>
-                                        <ul className="space-y-1 max-h-24 overflow-y-auto pr-2">
-                                            {specialty.services.slice(0, 3).map((service, idx) => (
-                                                <li key={idx} className="flex items-start text-sm text-slate">
-                                                    <span className="text-secondary mr-2">•</span>
-                                                    <span>{service}</span>
+                                        <h4 className="font-semibold text-secondary mb-3 text-lg">Services:</h4>
+                                        <ul className="space-y-2 max-h-32 overflow-y-auto pr-2">
+                                            {specialty.services.slice(0, 4).map((service, idx) => (
+                                                <li key={idx} className="flex items-start text-slate">
+                                                    <span className="text-secondary mr-2.5 mt-1 flex-shrink-0">•</span>
+                                                    <span className="text-slate-dark">{service}</span>
                                                 </li>
                                             ))}
-                                            {specialty.services.length > 3 && (
-                                                <li className="text-sm text-secondary font-medium">+ {specialty.services.length - 3} more</li>
+                                            {specialty.services.length > 4 && (
+                                                <li className="text-sm text-secondary font-medium mt-2 flex items-center">
+                                                    <span className="mr-2">•</span>
+                                                    <span>+ {specialty.services.length - 4} more services</span>
+                                                </li>
                                             )}
                                         </ul>
                                     </div>
@@ -124,8 +127,8 @@ const Home: React.FC = () => {
                     ))}
                 </div>
                 <div className="text-center mt-12">
-                    <Link to="/specialties" className="inline-flex items-center bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary-light transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-light hover:shadow-lg active:scale-95 min-w-[200px]">
-                        View All Specialties <span className="ml-2">→</span>
+                    <Link to="/specialties" className="inline-flex items-center bg-primary text-white font-bold py-3.5 px-8 rounded-lg hover:bg-primary-light transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-light hover:shadow-xl hover:shadow-primary/25 active:scale-95 min-w-[220px]">
+                        View All Specialties <span className="ml-2.5">→</span>
                     </Link>
                 </div>
             </HomeSection>
