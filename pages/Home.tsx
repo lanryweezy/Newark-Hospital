@@ -10,11 +10,11 @@ const Home: React.FC = () => {
         <div className="bg-accent">
             {/* Hero Section */}
             <section
-                className="relative bg-cover bg-center text-white"
+                className="relative bg-cover bg-center text-white hero-section"
                 style={{ backgroundImage: "url('/Newark%20%20(1).jpg')" }}
                 aria-label="Welcome to Newark Hospital"
             >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary/60"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/70 to-primary/50"></div>
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48 text-center">
                     <h1 
                         className="text-4xl md:text-6xl font-bold tracking-tight leading-tight font-serif animate-fade-in-up"
