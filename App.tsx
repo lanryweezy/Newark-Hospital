@@ -18,6 +18,7 @@ import PatientEducation from './pages/PatientEducation';
 import Careers from './pages/Careers';
 import Admin from './pages/Admin';
 import Chatbot from './components/Chatbot';
+import Donate from './pages/Donate';
 
 const App: React.FC = () => {
     return (
@@ -40,6 +41,7 @@ const App: React.FC = () => {
                         <Route path="/blog" element={<PatientEducation />} />
                         <Route path="/careers" element={<Careers />} />
                         <Route path="/admin" element={<Admin />} />
+                        <Route path="/donate" element={<Donate />} />
                     </Routes>
                 </main>
                 <Chatbot />

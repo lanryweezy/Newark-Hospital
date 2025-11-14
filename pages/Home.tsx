@@ -5,49 +5,16 @@ import { QuoteIcon } from '../components/IconComponents';
 import AnimatedBlock from '../components/AnimatedBlock';
 import HomeSection from '../components/HomeSection';
 
+import Hero from '../components/Hero';
+
 const Home: React.FC = () => {
     return (
         <div className="bg-accent">
-            {/* Hero Section */}
-            <section
-                className="relative bg-cover bg-center text-white hero-section"
-                style={{ backgroundImage: "url('/Newark%20%20(1).jpg')" }}
-                aria-label="Welcome to Newark Hospital"
-            >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/70 to-primary/50"></div>
-                <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48 text-center">
-                    <h1 
-                        className="text-4xl md:text-6xl font-bold tracking-tight leading-tight font-serif animate-fade-in-up"
-                        style={{ animationDelay: '200ms', opacity: 0 }}
-                    >
-                        Healing with Technology & Humanity
-                    </h1>
-                    <p 
-                        className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-slate-light/90 animate-fade-in-up"
-                        style={{ animationDelay: '400ms', opacity: 0 }}
-                    >
-                        Welcome to Newark Hospital, a state-of-the-art facility dedicated to providing exceptional healthcare for the Ibadan-Ogun community and beyond.
-                    </p>
-                    <div 
-                        className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 animate-fade-in-up"
-                        style={{ animationDelay: '600ms', opacity: 0 }}
-                    >
-                        <Link
-                            to="/appointments"
-                            className="w-full sm:w-auto bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-secondary/90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-glow-secondary active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-light min-w-[180px]"
-                        >
-                            Book Appointment
-                        </Link>
-                        <Link
-                            to="/specialties"
-                            className="w-full sm:w-auto bg-transparent border-2 border-slate-light text-slate-light font-bold py-3 px-8 rounded-lg hover:bg-slate-light hover:text-primary transition-colors duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-light min-w-[180px]"
-                        >
-                            Explore Specialties
-                        </Link>
-                    </div>
-                </div>
-            </section>
-            
+                        <Hero
+                            title="Healing with Technology & Humanity"
+                            subtitle="Welcome to Newark Hospital, a state-of-the-art facility dedicated to providing exceptional healthcare for the Ibadan-Ogun community and beyond."
+                                            mediaSrc="/Let_it_animate_202511140546.gif"
+                                            mediaType="image"                        />            
             {/* Why Choose Us Section */}
             <HomeSection
                 title="Excellence in Every Aspect"
@@ -220,6 +187,24 @@ const Home: React.FC = () => {
                 </div>
             </HomeSection>
             
+            {/* Donation Section */}
+            <HomeSection
+                title="Support Our Mission"
+                description="Your generous contribution helps us provide care for everyone, regardless of their financial status. Together, we can make a difference."
+                className="bg-white"
+            >
+                <div className="text-center">
+                    <p className="text-lg text-slate-dark">
+                        To make a donation, please use the following bank details:
+                    </p>
+                    <div className="mt-4 text-2xl font-bold text-primary">
+                        <p>Account Name: Alapini Olufunmilola</p>
+                        <p>Account Number: 1517886378</p>
+                        <p>Bank: Access Bank</p>
+                    </div>
+                </div>
+            </HomeSection>
+
             {/* Final CTA Section */}
             <section className="bg-primary py-20">
                 <AnimatedBlock className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white reveal">

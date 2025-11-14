@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import PageWrapper from '../components/PageWrapper';
 import { CheckCircleIcon, UsersIcon, BrainCircuitIcon, HeartHandshakeIcon, ChevronDownIcon, HospitalIcon, BedIcon, StethoscopeIcon } from '../components/IconComponents';
 import AnimatedBlock from '../components/AnimatedBlock';
+import Hero from '../components/Hero';
 
 const useCountUp = (end: number, duration: number = 2000) => {
     const [count, setCount] = useState(0);
@@ -98,6 +98,8 @@ const supportServices = [
 ];
 
 
+import Hero from '../components/Hero';
+
 const About: React.FC = () => {
     const [openAccordionIndex, setOpenAccordionIndex] = useState<number | null>(0);
     const [activeTab, setActiveTab] = useState<'medical' | 'support'>('medical');
@@ -116,28 +118,31 @@ const About: React.FC = () => {
     };
 
     return (
-        <PageWrapper pageType="admin"
-            title="About Newark Hospital"
-            subtitle="Pioneering the future of healthcare in Nigeria with a commitment to excellence, compassion, and innovation."
-        >
-            <AnimatedBlock as="section" className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center reveal">
-                <div className="order-2 lg:order-1">
-                    <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Our Mission & Vision</h2>
-                    <p className="text-slate mb-4 text-lg">
-                        Our mission is to deliver comprehensive, compassionate, and high-quality healthcare to every patient. We envision a healthier community where advanced medical services are accessible to all.
-                    </p>
-                    <p className="text-slate">
-                        Located on a 3005.310m² property in the Ibadan-Ogun region, Newark Hospital is designed to be a center of medical excellence, featuring over 150 beds, specialized departments, and emergency services including a dedicated helipad.
-                    </p>
-                </div>
-                <div className="order-1 lg:order-2">
-                    <img
-                        src="https://images.unsplash.com/photo-1519491338542-53ed369d3f28?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
-                        alt="Newark Hospital Building"
-                        className="rounded-lg shadow-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300"
-                    />
-                </div>
-            </AnimatedBlock>
+        <>
+                        <Hero
+                            title="About Newark Hospital"
+                            subtitle="Pioneering the future of healthcare in Nigeria with a commitment to excellence, compassion, and innovation."
+                            showButtons={false}
+                                            mediaSrc="/Let_it_animate_202511140546.gif"
+                                            mediaType="image"                        />            <PageWrapper pageType="admin">
+                <AnimatedBlock as="section" className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center reveal">
+                    <div className="order-2 lg:order-1">
+                        <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Our Mission & Vision</h2>
+                        <p className="text-slate mb-4 text-lg">
+                            “To be the beacon of universal healthcare in Newark, delivering timely, world‑class treatment to every patient—from the most affluent to the most vulnerable—ensuring no individual is left behind because of financial status.”
+                        </p>
+                        <p className="text-slate">
+                            Located on a 3005.310m² property in the Ibadan-Ogun region, Newark Hospital is designed to be a center of medical excellence, featuring over 150 beds, specialized departments, and emergency services including a dedicated helipad.
+                        </p>
+                    </div>
+                    <div className="order-1 lg:order-2">
+                        <img
+                            src="https://images.unsplash.com/photo-1519491338542-53ed369d3f28?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
+                            alt="Newark Hospital Building"
+                            className="rounded-lg shadow-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                </AnimatedBlock>
             
             <AnimatedBlock as="section" className="my-16 md:my-24 py-16 bg-white rounded-lg shadow-inner-lg reveal">
                  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -286,7 +291,7 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </AnimatedBlock>
-        </PageWrapper>
+        </>
     );
 };
 
