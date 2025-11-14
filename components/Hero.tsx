@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 interface HeroProps {
@@ -10,6 +10,17 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ title, subtitle, showButtons = true, mediaSrc, mediaType = 'image' }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        // Autoplay was prevented.
+        console.error("Video autoplay was prevented:", error);
+      });
+    }
+  }, []);
+
   return (
     <section
       className="relative text-white animate-ken-burns overflow-hidden"
@@ -17,6 +28,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, showButtons = true, mediaS
     >
       {mediaSrc && mediaType === 'video' ? (
         <video
+          ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover"
           src={mediaSrc}
           autoPlay
