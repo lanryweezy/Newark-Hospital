@@ -32,6 +32,7 @@ export const NAV_LINKS: NavLink[] = [
     { name: 'Patient Portal', path: '/patient-portal' },
     { name: 'Health Blog', path: '/blog' },
     { name: 'Careers', path: '/careers' },
+    { name: 'Donate', path: '/donate' },
     { name: 'Contact', path: '/contact' },
 ];
 

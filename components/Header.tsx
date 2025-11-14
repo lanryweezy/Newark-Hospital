@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { NAV_LINKS } from '../constants';
-import { HospitalIcon, MenuIcon, XIcon, SearchIcon } from './IconComponents';
+import { MedicalSymbolIcon, MenuIcon, XIcon, SearchIcon } from './IconComponents';
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
                         style={{ animationDelay: '200ms', opacity: 0 }}
                         aria-label="Newark Hospital - Go to homepage"
                     >
-                        <HospitalIcon className="h-8 w-8 text-secondary" aria-hidden="true" />
+                        <MedicalSymbolIcon className="h-8 w-8 text-secondary" aria-hidden="true" />
                         <span className="text-xl font-semibold tracking-wider font-serif">Newark Hospital</span>
                     </Link>
 
