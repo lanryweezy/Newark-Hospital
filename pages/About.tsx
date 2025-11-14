@@ -119,12 +119,13 @@ const About: React.FC = () => {
 
     return (
         <>
-            <Hero 
-                title="About Newark Hospital"
-                subtitle="Pioneering the future of healthcare in Nigeria with a commitment to excellence, compassion, and innovation."
-                showButtons={false}
-            />
-            <PageWrapper pageType="admin">
+                        <Hero
+                            title="About Newark Hospital"
+                            subtitle="Pioneering the future of healthcare in Nigeria with a commitment to excellence, compassion, and innovation."
+                            showButtons={false}
+                            mediaSrc="/Let_it_animate_202511140544_3hvld.mp4"
+                            mediaType="video"
+                        />            <PageWrapper pageType="admin">
                 <AnimatedBlock as="section" className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center reveal">
                     <div className="order-2 lg:order-1">
                         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Our Mission & Vision</h2>

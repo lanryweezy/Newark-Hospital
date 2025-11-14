@@ -10,11 +10,12 @@ import Hero from '../components/Hero';
 const Home: React.FC = () => {
     return (
         <div className="bg-accent">
-            <Hero 
-                title="Healing with Technology & Humanity"
-                subtitle="Welcome to Newark Hospital, a state-of-the-art facility dedicated to providing exceptional healthcare for the Ibadan-Ogun community and beyond."
-            />
-            
+                        <Hero
+                            title="Healing with Technology & Humanity"
+                            subtitle="Welcome to Newark Hospital, a state-of-the-art facility dedicated to providing exceptional healthcare for the Ibadan-Ogun community and beyond."
+                            mediaSrc="/Let_it_animate_202511140544_3hvld.mp4"
+                            mediaType="video"
+                        />            
             {/* Why Choose Us Section */}
             <HomeSection
                 title="Excellence in Every Aspect"
