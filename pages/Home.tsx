@@ -13,9 +13,8 @@ const Home: React.FC = () => {
                         <Hero
                             title="Healing with Technology & Humanity"
                             subtitle="Welcome to Newark Hospital, a state-of-the-art facility dedicated to providing exceptional healthcare for the Ibadan-Ogun community and beyond."
-                            mediaSrc="/Let_it_animate_202511140544_3hvld.mp4"
-                            mediaType="video"
-                        />            
+                                            mediaSrc="/Let_it_animate_202511140546.gif"
+                                            mediaType="image"                        />            
             {/* Why Choose Us Section */}
             <HomeSection
                 title="Excellence in Every Aspect"
