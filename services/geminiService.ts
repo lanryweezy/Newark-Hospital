@@ -1,13 +1,12 @@
 
 import { GoogleGenAI } from "@google/genai";
 
+// This is a placeholder for the real API key, which should be managed by the environment.
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-
-let ai: GoogleGenAI | null = null;
-if (API_KEY) {
-    ai = new GoogleGenAI({ apiKey: API_KEY });
-} else {
-    console.warn("Gemini API key not found. AI features will be disabled.");
+if (!API_KEY) {
+    // A check to ensure the API key is available.
+    // In a real production app, you might have better error handling or logging.
+    console.warn("Gemini API key not found. Please set the VITE_GEMINI_API_KEY environment variable.");
 }
 
 export const isAiAvailable = (): boolean => !!ai;
