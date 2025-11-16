@@ -9,11 +9,14 @@ if (!API_KEY) {
     console.warn("Gemini API key not found. Please set the VITE_GEMINI_API_KEY environment variable.");
 }
 
-const ai = new GoogleGenAI({ apiKey: API_KEY });
+export const isAiAvailable = (): boolean => !!ai;
 
 type ChatHistory = { role: 'user' | 'model'; parts: { text: string }[] }[];
 
 export const getChatbotResponse = async (prompt: string, history: ChatHistory): Promise<string> => {
+    if (!ai) {
+        return "AI service is unavailable. Please configure the API key.";
+    }
     try {
         const chat = ai.chats.create({
             model: 'gemini-2.5-flash',
@@ -31,6 +34,9 @@ export const getChatbotResponse = async (prompt: string, history: ChatHistory): 
 };
 
 export const getSymptomAnalysis = async (symptoms: string): Promise<string> => {
+    if (!ai) {
+        return "AI service is unavailable. Please configure the API key.";
+    }
     try {
         const prompt = `
             Analyze the following symptoms and provide a potential analysis for informational purposes only. The user is on a hospital website. Format the response using markdown.

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ChatIcon, XIcon } from './IconComponents';
-import { getChatbotResponse } from '../services/geminiService';
+import { getChatbotResponse, isAiAvailable } from '../services/geminiService';
 
 type Message = {
     role: 'user' | 'model';
@@ -17,6 +17,10 @@ const Chatbot: React.FC = () => {
     const [userInput, setUserInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef<null | HTMLDivElement>(null);
+
+    if (!isAiAvailable()) {
+        return null;
+    }
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
