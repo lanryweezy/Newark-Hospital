@@ -2,11 +2,11 @@
 import { GoogleGenAI } from "@google/genai";
 
 // This is a placeholder for the real API key, which should be managed by the environment.
-const API_KEY = process.env.GEMINI_API_KEY;
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 if (!API_KEY) {
     // A check to ensure the API key is available.
     // In a real production app, you might have better error handling or logging.
-    console.warn("Gemini API key not found. Please set the GEMINI_API_KEY environment variable.");
+    console.warn("Gemini API key not found. Please set the VITE_GEMINI_API_KEY environment variable.");
 }
 
 const ai = new GoogleGenAI({ apiKey: API_KEY });
