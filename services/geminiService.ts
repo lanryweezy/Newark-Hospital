@@ -1,19 +1,23 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-// This is a placeholder for the real API key, which should be managed by the environment.
-const API_KEY = process.env.GEMINI_API_KEY;
-if (!API_KEY) {
-    // A check to ensure the API key is available.
-    // In a real production app, you might have better error handling or logging.
-    console.warn("Gemini API key not found. Please set the GEMINI_API_KEY environment variable.");
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+
+let ai: GoogleGenAI | null = null;
+if (API_KEY) {
+    ai = new GoogleGenAI({ apiKey: API_KEY });
+} else {
+    console.warn("Gemini API key not found. AI features will be disabled.");
 }
 
-const ai = new GoogleGenAI({ apiKey: API_KEY });
+export const isAiAvailable = (): boolean => !!ai;
 
 type ChatHistory = { role: 'user' | 'model'; parts: { text: string }[] }[];
 
 export const getChatbotResponse = async (prompt: string, history: ChatHistory): Promise<string> => {
+    if (!ai) {
+        return "AI service is unavailable. Please configure the API key.";
+    }
     try {
         const chat = ai.chats.create({
             model: 'gemini-2.5-flash',
@@ -31,6 +35,9 @@ export const getChatbotResponse = async (prompt: string, history: ChatHistory): 
 };
 
 export const getSymptomAnalysis = async (symptoms: string): Promise<string> => {
+    if (!ai) {
+        return "AI service is unavailable. Please configure the API key.";
+    }
     try {
         const prompt = `
             Analyze the following symptoms and provide a potential analysis for informational purposes only. The user is on a hospital website. Format the response using markdown.

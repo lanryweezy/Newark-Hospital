@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PageWrapper from '../components/PageWrapper';
-import { getSymptomAnalysis } from '../services/geminiService';
+import { getSymptomAnalysis, isAiAvailable } from '../services/geminiService';
 import { SymptomCheckerIcon } from '../components/IconComponents';
 
 const Typewriter: React.FC<{ text: string }> = ({ text }) => {
@@ -31,6 +31,24 @@ const SymptomChecker: React.FC = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
     const MAX_CHARS = 1000;
+
+    if (!isAiAvailable()) {
+        return (
+            <PageWrapper
+                title="AI Symptom Checker"
+                subtitle="Describe your symptoms to get an AI-powered analysis. This tool is for informational purposes only and is not a substitute for professional medical advice."
+            >
+                <div className="max-w-4xl mx-auto text-center">
+                    <div className="bg-white p-8 rounded-lg shadow-xl">
+                        <h2 className="text-2xl font-bold text-primary mb-4">Feature Unavailable</h2>
+                        <p className="text-lg text-gray-600">
+                            The AI Symptom Checker is currently unavailable. Please check back later or contact the hospital directly for assistance.
+                        </p>
+                    </div>
+                </div>
+            </PageWrapper>
+        );
+    }
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
