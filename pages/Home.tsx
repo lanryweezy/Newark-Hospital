@@ -11,7 +11,7 @@ const Home: React.FC = () => {
             {/* Hero Section */}
             <section
                 className="relative bg-cover bg-center text-white"
-                style={{ backgroundImage: "url('/Newark%20%20(1).jpg')" }}
+                style={{ backgroundImage: "url('/Newark (1).jpg')" }}
                 aria-label="Welcome to Newark Hospital"
             >
                 <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary/60"></div>
