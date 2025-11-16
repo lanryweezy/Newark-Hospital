@@ -19,14 +19,14 @@ const PageWrapper: React.FC<PageWrapperProps> = ({ title, subtitle, children }) 
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center text-white">
                     <h1 
                         className="text-4xl md:text-5xl font-bold tracking-tight font-serif animate-fade-in-up"
-                        style={{ animationDelay: '200ms', opacity: 0 }}
+                        style={{ animationDelay: '200ms' }}
                     >
                         {title}
                     </h1>
                     {subtitle && (
                         <p 
                             className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-slate-light/90 animate-fade-in-up"
-                            style={{ animationDelay: '400ms', opacity: 0 }}
+                            style={{ animationDelay: '400ms' }}
                         >
                             {subtitle}
                         </p>
