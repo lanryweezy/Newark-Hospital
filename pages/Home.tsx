@@ -18,19 +18,19 @@ const Home: React.FC = () => {
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48 text-center">
                     <h1 
                         className="text-4xl md:text-6xl font-bold tracking-tight leading-tight font-serif animate-fade-in-up"
-                        style={{ animationDelay: '200ms', opacity: 0 }}
+                        style={{ animationDelay: '200ms' }}
                     >
                         Healing with Technology & Humanity
                     </h1>
                     <p 
                         className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-slate-light/90 animate-fade-in-up"
-                        style={{ animationDelay: '400ms', opacity: 0 }}
+                        style={{ animationDelay: '400ms' }}
                     >
                         Welcome to Newark Hospital, a state-of-the-art facility dedicated to providing exceptional healthcare for the Ibadan-Ogun community and beyond.
                     </p>
                     <div 
                         className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 animate-fade-in-up"
-                        style={{ animationDelay: '600ms', opacity: 0 }}
+                        style={{ animationDelay: '600ms' }}
                     >
                         <Link
                             to="/appointments"
