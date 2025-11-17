@@ -10,12 +10,25 @@ const Home: React.FC = () => {
         <div className="bg-accent">
             {/* Hero Section */}
             <section
-                className="relative bg-cover bg-center text-white"
-                style={{ backgroundImage: "url('/Newark (1).jpg')" }}
+                className="relative text-white overflow-hidden"
                 aria-label="Welcome to Newark Hospital"
             >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary/60"></div>
-                <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48 text-center">
+                {/* Video Background */}
+                <div className="absolute inset-0 z-0">
+                    <video 
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline
+                        className="w-full h-full object-cover"
+                    >
+                        <source src="/Let_it_animate_202511140544_3hvld.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary/60"></div>
+                </div>
+                
+                <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48 text-center z-10">
                     <h1 
                         className="text-4xl md:text-6xl font-bold tracking-tight leading-tight font-serif animate-fade-in-up"
                         style={{ animationDelay: '200ms' }}
