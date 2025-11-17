@@ -283,28 +283,28 @@ export const HEALTH_ARTICLES_DATA: HealthArticle[] = [
     {
         title: "Understanding and Managing High Blood Pressure",
         category: "Cardiology",
-        imageUrl: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        imageUrl: "/blood pressure .png",
         excerpt: "High blood pressure is a common condition that can lead to serious health problems. Learn about its causes, risks, and how to manage it through lifestyle changes and medication.",
         path: "#"
     },
     {
         title: "The Importance of Childhood Vaccinations",
         category: "Pediatrics",
-        imageUrl: "https://images.unsplash.com/photo-1605289355470-43a53d3ce7b7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        imageUrl: "/pediatic.png",
         excerpt: "Vaccinations are crucial for protecting children from a variety of serious diseases. Understand how they work and the recommended immunization schedule.",
         path: "#"
     },
     {
         title: "Recognizing the Early Signs of a Stroke",
         category: "Neurology",
-        imageUrl: "https://images.unsplash.com/photo-1579154214652-086812d4191c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        imageUrl: "/stroke.png",
         excerpt: "A stroke is a medical emergency where every second counts. Learn the F.A.S.T. warning signs to help you identify a stroke and take immediate action.",
         path: "#"
     },
     {
         title: "Nutrition Tips for a Healthy Pregnancy",
         category: "Obstetrics",
-        imageUrl: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        imageUrl: "/food.png",
         excerpt: "Proper nutrition during pregnancy is vital for the health of both mother and baby. Discover essential nutrients, foods to eat, and what to avoid.",
         path: "#"
     }
