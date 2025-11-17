@@ -13,18 +13,13 @@ const Home: React.FC = () => {
                 className="relative text-white overflow-hidden"
                 aria-label="Welcome to Newark Hospital"
             >
-                {/* Video Background */}
+                {/* GIF Background */}
                 <div className="absolute inset-0 z-0">
-                    <video 
-                        autoPlay 
-                        loop 
-                        muted 
-                        playsInline
+                    <img 
+                        src="/Let_it_animate_202511140546.gif"
+                        alt="Hospital background animation"
                         className="w-full h-full object-cover"
-                    >
-                        <source src="/Let_it_animate_202511140544_3hvld.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
+                    />
                 </div>
                 
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48 text-center z-10">
