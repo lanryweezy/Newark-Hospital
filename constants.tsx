@@ -14,7 +14,7 @@ export const whyChooseUsData = [
         icon: UsersIcon,
         title: 'Expert Medical Team',
         description: 'Our team consists of highly skilled, board-certified specialists and compassionate staff dedicated to your health.',
-        imageUrl: 'https://images.unsplash.com/photo-1538108144326-3c33343437d3?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        imageUrl: '/group-african-medical-students-posed-outdoor.jpg'
     },
     {
         icon: HeartHandshakeIcon,
@@ -32,6 +32,7 @@ export const NAV_LINKS: NavLink[] = [
     { name: 'Patient Portal', path: '/patient-portal' },
     { name: 'Health Blog', path: '/blog' },
     { name: 'Careers', path: '/careers' },
+    { name: 'Donation', path: '/donation' },
     { name: 'Contact', path: '/contact' },
 ];
 
@@ -42,7 +43,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: '24/7 state-of-the-art emergency and trauma care, prepared to handle critical conditions with rapid response teams and advanced life support.',
         icon: HeartPulseIcon,
         services: ['Level II Trauma Center', '24/7 Emergency Physician Coverage', 'Stroke and Cardiac Emergency Care', 'Ambulance Services'],
-        imageUrl: 'https://images.unsplash.com/photo-1519491338542-53ed369d3f28?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: '/interior-view-operating-room.jpg',
         category: 'Core Medical & Surgical',
     },
     {
@@ -50,7 +51,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'A comprehensive range of surgical procedures in modern operating suites, supported by dedicated intensive care (ICU) and recovery units.',
         icon: StethoscopeIcon,
         services: ['General & Minimally Invasive Surgery', 'Intensive Care Unit (ICU)', 'Post-Anesthesia Care Unit (PACU)', 'Inpatient Medical Units'],
-        imageUrl: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: '/suRGICAL.jpg',
         category: 'Core Medical & Surgical',
     },
     {
@@ -58,7 +59,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'Comprehensive care for women at all stages of life, from maternity services to specialized gynecological treatments.',
         icon: BabyIcon,
         services: ['Maternity Care', 'Labor & Delivery', 'Gynecological Surgery', 'Family Planning'],
-        imageUrl: 'https://images.unsplash.com/photo-1584438784923-565f208d7e18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: '/gynecology .png',
         category: 'Core Medical & Surgical',
     },
     {
@@ -66,7 +67,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'Specialized and compassionate care for infants, children, and adolescents, focusing on their unique health and wellness needs.',
         icon: BabyIcon,
         services: ['Well-Child Visits', 'Immunizations', 'Adolescent Medicine', 'Pediatric Emergency Care'],
-        imageUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: '/pediatic.png',
         category: 'Core Medical & Surgical',
     },
     {
@@ -74,7 +75,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'Specialized care for musculoskeletal conditions, including joint replacement, sports injuries, and trauma surgery.',
         icon: BoneIcon,
         services: ['Joint Replacement', 'Sports Medicine', 'Spine Surgery', 'Trauma & Fracture Care'],
-        imageUrl: 'https://images.unsplash.com/photo-1516035069371-29a5f0b3c4d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: '/otepedeic.png',
         category: 'Core Medical & Surgical',
     },
     {
@@ -82,7 +83,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'Integrated care for heart conditions and diabetes management, focusing on prevention, advanced diagnostics, and personalized treatment plans.',
         icon: HeartPulseIcon,
         services: ['Interventional Cardiology', 'Diabetic Health Management', 'Heart Failure Clinics', 'Echocardiography'],
-        imageUrl: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: '/diabetics.png',
         category: 'Core Medical & Surgical',
     },
     {
@@ -90,7 +91,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'Convenient access to a variety of diagnostic and therapeutic services that do not require an overnight hospital stay.',
         icon: UsersIcon,
         services: ['Same-Day Minor Procedures', 'Diagnostic Imaging (X-Ray, CT)', 'Laboratory Services', 'Specialist Consultations'],
-        imageUrl: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: '/out paitent service .png',
         category: 'Core Medical & Surgical',
     },
 
@@ -100,7 +101,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'Advanced imaging services providing detailed insights for accurate diagnosis, including MRI, CT scans, Ultrasound, and X-rays.',
         icon: BrainCircuitIcon,
         services: ['Magnetic Resonance Imaging (MRI)', 'Computed Tomography (CT)', 'Ultrasound', 'Digital X-ray'],
-        imageUrl: 'https://images.unsplash.com/photo-1598974357801-cbca100e65d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: '/crt scan .png',
         category: 'Diagnostic & Therapeutic',
     },
     {
@@ -108,7 +109,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'Comprehensive lab testing to support diagnosis and treatment, from routine blood work to complex pathological analysis.',
         icon: MicroscopeIcon,
         services: ['Clinical Pathology', 'Hematology', 'Microbiology', 'Blood Bank'],
-        imageUrl: 'https://images.unsplash.com/photo-1581091226033-d5c48150db51?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: '/lab service .png',
         category: 'Diagnostic & Therapeutic',
     },
     {
@@ -116,7 +117,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'Inpatient and outpatient pharmacy services ensuring safe, effective medication management for all patients.',
         icon: PillIcon,
         services: ['Inpatient Medication Dispensing', 'Outpatient Prescriptions', 'Medication Therapy Management', 'Pharmaceutical Counseling'],
-        imageUrl: 'https://images.unsplash.com/photo-1584125919221-62ce3b815fad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: '/pharmacy service.jpg',
         category: 'Diagnostic & Therapeutic',
     },
     {
@@ -124,7 +125,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'A dedicated center to help patients recover function and mobility through physical, occupational, and speech therapy.',
         icon: HeartHandshakeIcon,
         services: ['Physical Therapy (PT)', 'Occupational Therapy (OT)', 'Speech Pathology (SP)', 'Post-Surgical Rehabilitation'],
-        imageUrl: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: '/rehabilitation .png',
         category: 'Diagnostic & Therapeutic',
     },
 
@@ -134,7 +135,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'Expert diagnosis and treatment for disorders of the brain, spinal cord, and nervous system, provided by a team of highly skilled neurologists.',
         icon: BrainCircuitIcon,
         services: ['Stroke Care', 'Epilepsy Management', 'Headache & Migraine Clinics', 'Neurodegenerative Disorders'],
-        imageUrl: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: '/neurology .png',
         category: 'Specialized Care Centers',
     },
     {
@@ -142,7 +143,7 @@ export const SPECIALTIES_DATA: Specialty[] = [
         description: 'Compassionate, multidisciplinary cancer care, offering the latest treatments including chemotherapy, radiation therapy, and immunotherapy.',
         icon: PillIcon,
         services: ['Medical Oncology', 'Radiation Oncology', 'Surgical Oncology', 'Patient Support Services'],
-        imageUrl: 'https://images.unsplash.com/photo-1516152685146-8a2a1d0a7f8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80',
+        imageUrl: '/oncology.png',
         category: 'Specialized Care Centers',
     },
 ];

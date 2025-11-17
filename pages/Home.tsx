@@ -26,7 +26,7 @@ const Home: React.FC = () => {
                         className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-slate-light/90 animate-fade-in-up"
                         style={{ animationDelay: '400ms' }}
                     >
-                        Welcome to Newark Hospital, a state-of-the-art facility dedicated to providing exceptional healthcare for the Ibadan-Ogun community and beyond.
+                        Welcome to Newark Hospital, a state-of-the-art facility dedicated to providing exceptional healthcare for the Nigeria community and beyond.
                     </p>
                     <div 
                         className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 animate-fade-in-up"
@@ -88,11 +88,14 @@ const Home: React.FC = () => {
                     {SPECIALTIES_DATA.slice(0, 6).map((specialty, index) => (
                         <AnimatedBlock key={specialty.name} className="reveal group" style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}>
                             <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full border border-gray-100">
-                                <div className="h-48 overflow-hidden">
+                                <div className="h-48 overflow-hidden bg-gray-200">
                                     <img
                                         src={specialty.imageUrl}
                                         alt={specialty.name}
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        onError={(e) => {
+                                            e.currentTarget.style.display = 'none';
+                                        }}
                                     />
                                 </div>
                                 <div className="p-6 flex flex-col flex-grow">
@@ -141,7 +144,6 @@ const Home: React.FC = () => {
                         <AnimatedBlock key={doctor.name} className="reveal" style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}>
                             <article className="group bg-white rounded-lg shadow-lg overflow-hidden text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full">
                                 <div className="overflow-hidden">
-                                    {/* TODO: Replace with optimized images for each doctor */}
                                     <img className="w-full h-72 object-cover object-center group-hover:scale-105 transition-transform duration-300" src={doctor.imageUrl} alt={`Dr. ${doctor.name}, ${doctor.specialty}`} />
                                 </div>
                                 <div className="p-6">

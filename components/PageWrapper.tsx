@@ -11,7 +11,7 @@ const PageWrapper: React.FC<PageWrapperProps> = ({ title, subtitle, children }) 
         <div className="bg-accent animate-page-fade-in">
             <header 
                 className="relative bg-cover bg-center border-b border-primary-lightest/20"
-                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1519491338542-53ed369d3f28?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')" }}
+                style={{ backgroundImage: "url('/Newark (1).jpg')" }}
             >
                 {/* Overlay for readability */}
                 <div className="absolute inset-0 bg-primary/70"></div>

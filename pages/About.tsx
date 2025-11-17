@@ -124,15 +124,21 @@ const About: React.FC = () => {
                 <div className="order-2 lg:order-1">
                     <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-serif">Our Mission & Vision</h2>
                     <p className="text-slate mb-4 text-lg">
-                        Our mission is to deliver comprehensive, compassionate, and high-quality healthcare to every patient. We envision a healthier community where advanced medical services are accessible to all.
+                        Our mission is to deliver comprehensive, compassionate, and high-quality healthcare to every patient. 
+                    </p>
+                    <p className="text-slate mb-4 text-lg font-semibold">
+                        Vision Statement – Newark Hospital
+                    </p>
+                    <p className="text-slate mb-4 text-lg italic">
+                        "To be the beacon of universal healthcare in Newark, delivering timely, world‑class treatment to every patient—from the most affluent to the most vulnerable—ensuring no individual is left behind because of financial status."
                     </p>
                     <p className="text-slate">
-                        Located on a 3005.310m² property in the Ibadan-Ogun region, Newark Hospital is designed to be a center of medical excellence, featuring over 150 beds, specialized departments, and emergency services including a dedicated helipad.
+                        Located on a 3005.310m² property in the Nigeria region, Newark Hospital is designed to be a center of medical excellence, featuring over 150 beds, specialized departments, and emergency services including a dedicated helipad.
                     </p>
                 </div>
                 <div className="order-1 lg:order-2">
                     <img
-                        src="https://images.unsplash.com/photo-1519491338542-53ed369d3f28?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
+                        src="/Newark (1).jpg"
                         alt="Newark Hospital Building"
                         className="rounded-lg shadow-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300"
                     />
@@ -256,16 +262,16 @@ const About: React.FC = () => {
                  </p>
                  <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[250px]">
                     <div className="col-span-2 row-span-2 rounded-lg overflow-hidden shadow-lg group">
-                        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80" alt="Modern hospital waiting area" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                        <img src="/Newark (1).jpg" alt="Newark Hospital exterior" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
                     </div>
                      <div className="rounded-lg overflow-hidden shadow-lg group">
-                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=250&q=80" alt="High-tech medical laboratory" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                        <img src="/interior-view-operating-room.jpg" alt="Emergency Room and Operating Theater" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
                     </div>
                      <div className="rounded-lg overflow-hidden shadow-lg group">
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=250&q=80" alt="Serene patient recovery room" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                        <img src="/facility 3.png" alt="Hospital facility" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
                     </div>
                     <div className="col-span-2 rounded-lg overflow-hidden shadow-lg group">
-                        <img src="https://images.unsplash.com/photo-1519491338542-53ed369d3f28?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=250&q=80" alt="Advanced hospital exterior" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                        <img src="/faciliyy 4.png" alt="Hospital facility" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
                     </div>
                  </div>
             </AnimatedBlock>

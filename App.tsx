@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -17,6 +16,7 @@ import OnlineBillPay from './pages/OnlineBillPay';
 import PatientEducation from './pages/PatientEducation';
 import Careers from './pages/Careers';
 import Admin from './pages/Admin';
+import Donation from './pages/Donation';
 import Chatbot from './components/Chatbot';
 
 const App: React.FC = () => {
@@ -40,6 +40,7 @@ const App: React.FC = () => {
                         <Route path="/blog" element={<PatientEducation />} />
                         <Route path="/careers" element={<Careers />} />
                         <Route path="/admin" element={<Admin />} />
+                        <Route path="/donation" element={<Donation />} />
                     </Routes>
                 </main>
                 <Chatbot />

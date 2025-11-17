@@ -64,12 +64,12 @@ const Footer: React.FC = () => {
                             </li>
                             <li className="flex items-center">
                                 <PhoneIcon className="h-5 w-5 mr-3 text-secondary" aria-hidden="true" />
-                                <a href="tel:+234123456789" className="hover:text-secondary text-slate rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-light" aria-label="Call us at +234 (123) 456 789">+234 (123) 456 789</a>
+                                <a href="tel:+3248166250581" className="hover:text-secondary text-slate rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-light" aria-label="Call us at +3248166250581">+3248166250581</a>
                             </li>
                         </ul>
                         <h3 className="text-lg font-semibold tracking-wider text-secondary">Emergency</h3>
-                        <a href="tel:+234987654321" className="text-xl font-bold text-white hover:text-secondary transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-light" aria-label="Emergency line: +234 (987) 654 321">
-                            +234 (987) 654 321
+                        <a href="tel:+3248166250581" className="text-xl font-bold text-white hover:text-secondary transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-light" aria-label="Emergency line: +3248166250581">
+                            +3248166250581
                         </a>
                     </div>
                 </div>
