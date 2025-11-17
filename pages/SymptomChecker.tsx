@@ -62,8 +62,7 @@ const SymptomChecker: React.FC = () => {
         try {
             const result = await getSymptomAnalysis(symptoms);
             setAnalysis(result);
-        } catch (err)
-            {
+        } catch (err) {
             setError('An error occurred while analyzing symptoms. Please try again.');
         } finally {
             setIsLoading(false);

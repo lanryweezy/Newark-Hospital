@@ -9,6 +9,9 @@ if (!API_KEY) {
     console.warn("Gemini API key not found. Please set the VITE_GEMINI_API_KEY environment variable.");
 }
 
+// Initialize the GoogleGenAI instance with the API key
+const ai = API_KEY ? new GoogleGenAI({ apiKey: API_KEY }) : null;
+
 export const isAiAvailable = (): boolean => !!ai;
 
 type ChatHistory = { role: 'user' | 'model'; parts: { text: string }[] }[];
