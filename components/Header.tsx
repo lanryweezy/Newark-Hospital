@@ -63,7 +63,7 @@ const Header: React.FC = () => {
                     <Link 
                         to="/" 
                         className="flex items-center space-x-3 text-slate-light rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-light focus-visible:ring-offset-primary animate-slide-in-from-left"
-                        style={{ animationDelay: '200ms', opacity: 0 }}
+                        style={{ animationDelay: '200ms' }}
                         aria-label="Newark Hospital - Go to homepage"
                     >
                         <HospitalIcon className="h-8 w-8 text-secondary" aria-hidden="true" />
