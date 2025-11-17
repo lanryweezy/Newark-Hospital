@@ -25,18 +25,17 @@ const Home: React.FC = () => {
                         <source src="/Let_it_animate_202511140544_3hvld.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-primary/60"></div>
                 </div>
                 
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-48 text-center z-10">
                     <h1 
-                        className="text-4xl md:text-6xl font-bold tracking-tight leading-tight font-serif animate-fade-in-up"
+                        className="text-4xl md:text-6xl font-bold tracking-tight leading-tight font-serif animate-fade-in-up text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]"
                         style={{ animationDelay: '200ms' }}
                     >
                         Healing with Technology & Humanity
                     </h1>
                     <p 
-                        className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-slate-light/90 animate-fade-in-up"
+                        className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-white/90 animate-fade-in-up drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)]"
                         style={{ animationDelay: '400ms' }}
                     >
                         Welcome to Newark Hospital, a state-of-the-art facility dedicated to providing exceptional healthcare for the Nigeria community and beyond.
@@ -47,13 +46,13 @@ const Home: React.FC = () => {
                     >
                         <Link
                             to="/appointments"
-                            className="w-full sm:w-auto bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-secondary/90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-glow-secondary active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-light min-w-[180px]"
+                            className="w-full sm:w-auto bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-secondary/90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-glow-secondary active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-light min-w-[180px] drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]"
                         >
                             Book Appointment
                         </Link>
                         <Link
                             to="/specialties"
-                            className="w-full sm:w-auto bg-transparent border-2 border-slate-light text-slate-light font-bold py-3 px-8 rounded-lg hover:bg-slate-light hover:text-primary transition-colors duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-light min-w-[180px]"
+                            className="w-full sm:w-auto bg-white/20 border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white/30 transition-colors duration-300 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-light min-w-[180px] backdrop-blur-sm drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]"
                         >
                             Explore Specialties
                         </Link>
