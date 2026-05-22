@@ -20,6 +20,8 @@ export interface Doctor {
     specialty: string;
     imageUrl: string;
     bio: string;
+    rating?: number;
+    reviewCount?: number;
 }
 
 export interface Testimonial {

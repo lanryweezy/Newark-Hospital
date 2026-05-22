@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
                         </ul>
                     </div>
                      <div className="bg-white rounded-lg shadow-lg overflow-hidden relative">
-                         <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Map to hospital" className="w-full h-64 object-cover" />
+                         <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Map to hospital" className="w-full h-64 object-cover" loading="lazy" />
                          <div className="absolute inset-0 bg-black/10 flex items-center justify-center">
                             <div className="bg-white/80 backdrop-blur-sm p-2 rounded-full" aria-hidden="true">
                                 <MapPinIcon className="h-10 w-10 text-secondary" />

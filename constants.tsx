@@ -154,25 +154,33 @@ export const DOCTORS_DATA: Doctor[] = [
         name: 'Dr. Amina Okoro',
         specialty: 'Cardiovascular & Diabetes Care',
         imageUrl: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        bio: 'Dr. Okoro is a leading cardiologist with over 15 years of experience in treating complex heart conditions. She is a pioneer in minimally invasive cardiac procedures in Nigeria.'
+        bio: 'Dr. Okoro is a leading cardiologist with over 15 years of experience in treating complex heart conditions. She is a pioneer in minimally invasive cardiac procedures in Nigeria.',
+        rating: 4.9,
+        reviewCount: 124
     },
     {
         name: 'Dr. Ben Carter',
         specialty: 'Orthopedics',
         imageUrl: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        bio: 'Specializing in sports medicine and joint replacement, Dr. Carter has helped countless athletes return to their peak performance. He is renowned for his surgical precision.'
+        bio: 'Specializing in sports medicine and joint replacement, Dr. Carter has helped countless athletes return to their peak performance. He is renowned for his surgical precision.',
+        rating: 4.7,
+        reviewCount: 89
     },
     {
         name: 'Dr. Fatima Aliyu',
         specialty: 'Pediatrics',
         imageUrl: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        bio: 'With a passion for children\'s health, Dr. Aliyu provides compassionate and comprehensive care for infants, children, and adolescents. She is an advocate for community health initiatives.'
+        bio: 'With a passion for children\'s health, Dr. Aliyu provides compassionate and comprehensive care for infants, children, and adolescents. She is an advocate for community health initiatives.',
+        rating: 4.8,
+        reviewCount: 156
     },
     {
         name: 'Dr. John Adeleke',
         specialty: 'Neurology',
         imageUrl: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        bio: 'Dr. Adeleke is an expert in diagnosing and treating disorders of the nervous system. His research in neurodegenerative diseases is internationally recognized.'
+        bio: 'Dr. Adeleke is an expert in diagnosing and treating disorders of the nervous system. His research in neurodegenerative diseases is internationally recognized.',
+        rating: 4.6,
+        reviewCount: 72
     }
 ];
 

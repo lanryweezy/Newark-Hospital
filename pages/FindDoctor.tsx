@@ -32,6 +32,7 @@ const DoctorCard: React.FC<{ doctor: Doctor }> = ({ doctor }) => {
                         alt={`Photo of ${doctor.name}, a specialist in ${doctor.specialty} at Newark Hospital.`}
                         onError={handleImageError}
                         aria-hidden="false"
+                        loading="lazy"
                     />
                 ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gray-100" role="img" aria-label={`Placeholder image for ${doctor.name}`}>
@@ -42,6 +43,18 @@ const DoctorCard: React.FC<{ doctor: Doctor }> = ({ doctor }) => {
             <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold text-primary">{doctor.name}</h3>
                 <p className="text-secondary font-semibold mt-1">{doctor.specialty}</p>
+                {doctor.rating && (
+                    <div className="flex items-center mt-2">
+                        <div className="flex text-yellow-400">
+                            {[...Array(5)].map((_, i) => (
+                                <svg key={i} className={`h-4 w-4 ${i < Math.floor(doctor.rating!) ? 'fill-current' : 'text-gray-300 fill-current'}`} viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            ))}
+                        </div>
+                        <span className="ml-2 text-sm text-gray-600 font-medium">{doctor.rating} ({doctor.reviewCount} reviews)</span>
+                    </div>
+                )}
                 <p className="mt-4 text-slate text-sm flex-grow">{doctor.bio}</p>
                 <button
                     onClick={handleRequestAppointment}
@@ -57,6 +70,26 @@ const DoctorCard: React.FC<{ doctor: Doctor }> = ({ doctor }) => {
 
 const FindDoctor: React.FC = () => {
     const location = useLocation();
+
+    // JSON-LD Local Business/Doctor Schema
+    const doctorSchema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": DOCTORS_DATA.map((doctor, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+                "@type": "Physician",
+                "name": doctor.name,
+                "image": doctor.imageUrl,
+                "medicalSpecialty": doctor.specialty,
+                "memberOf": {
+                    "@type": "Hospital",
+                    "name": "Newark Hospital"
+                }
+            }
+        }))
+    };
 
     const getInitialSearchTerm = () => {
         const params = new URLSearchParams(location.search);
@@ -85,6 +118,9 @@ const FindDoctor: React.FC = () => {
 
     return (
         <PageWrapper title="Find a Doctor" subtitle="Search our directory of world-class physicians and specialists to find the right care for you.">
+            <script type="application/ld+json">
+                {JSON.stringify(doctorSchema)}
+            </script>
             {/* Hero section removed - now handled by PageWrapper */}
             <div className="mb-12 bg-white p-6 rounded-xl shadow-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

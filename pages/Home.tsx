@@ -19,6 +19,7 @@ const Home: React.FC = () => {
                         src="/Let_it_animate_202511140546.gif"
                         alt="Hospital background animation"
                         className="w-full h-full object-cover"
+                        loading="eager"
                     />
                 </div>
                 
@@ -100,6 +101,7 @@ const Home: React.FC = () => {
                                         src={specialty.imageUrl}
                                         alt={specialty.name}
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                        loading="lazy"
                                         onError={(e) => {
                                             e.currentTarget.style.display = 'none';
                                         }}
@@ -151,7 +153,7 @@ const Home: React.FC = () => {
                         <AnimatedBlock key={doctor.name} className="reveal" style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}>
                             <article className="group bg-white rounded-lg shadow-lg overflow-hidden text-center transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full">
                                 <div className="overflow-hidden">
-                                    <img className="w-full h-72 object-cover object-center group-hover:scale-105 transition-transform duration-300" src={doctor.imageUrl} alt={`Dr. ${doctor.name}, ${doctor.specialty}`} />
+                                    <img className="w-full h-72 object-cover object-center group-hover:scale-105 transition-transform duration-300" src={doctor.imageUrl} alt={`Dr. ${doctor.name}, ${doctor.specialty}`} loading="lazy" />
                                 </div>
                                 <div className="p-6">
                                     <h3 className="text-xl font-bold text-primary">{doctor.name}</h3>

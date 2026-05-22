@@ -141,6 +141,7 @@ const About: React.FC = () => {
                         src="/Newark (1).jpg"
                         alt="Newark Hospital Building"
                         className="rounded-lg shadow-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
                     />
                 </div>
             </AnimatedBlock>
@@ -262,16 +263,16 @@ const About: React.FC = () => {
                  </p>
                  <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[250px]">
                     <div className="col-span-2 row-span-2 rounded-lg overflow-hidden shadow-lg group">
-                        <img src="/Newark (1).jpg" alt="Newark Hospital exterior" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                        <img src="/Newark (1).jpg" alt="Newark Hospital exterior" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"/>
                     </div>
                      <div className="rounded-lg overflow-hidden shadow-lg group">
-                        <img src="/interior-view-operating-room.jpg" alt="Emergency Room and Operating Theater" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                        <img src="/interior-view-operating-room.jpg" alt="Emergency Room and Operating Theater" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"/>
                     </div>
                      <div className="rounded-lg overflow-hidden shadow-lg group">
-                        <img src="/facility 3.png" alt="Hospital facility" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                        <img src="/facility 3.png" alt="Hospital facility" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"/>
                     </div>
                     <div className="col-span-2 rounded-lg overflow-hidden shadow-lg group">
-                        <img src="/faciliyy 4.png" alt="Hospital facility" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+                        <img src="/faciliyy 4.png" alt="Hospital facility" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy"/>
                     </div>
                  </div>
             </AnimatedBlock>

@@ -7,9 +7,18 @@ import type { Doctor } from '../types';
 import { UserDoctorIcon, ChevronDownIcon, StethoscopeIcon, CalendarIcon, ClockIcon, CheckCircleIcon } from '../components/IconComponents';
 
 const TIME_SLOTS = [
-    "09:00 AM", "09:30 AM", "10:00 AM", "10:30 AM",
-    "11:00 AM", "11:30 AM", "01:00 PM", "01:30 PM",
-    "02:00 PM", "02:30 PM", "03:00 PM", "03:30 PM",
+    { time: "09:00 AM", available: true },
+    { time: "09:30 AM", available: false },
+    { time: "10:00 AM", available: true },
+    { time: "10:30 AM", available: true },
+    { time: "11:00 AM", available: false },
+    { time: "11:30 AM", available: true },
+    { time: "01:00 PM", available: true },
+    { time: "01:30 PM", available: true },
+    { time: "02:00 PM", available: false },
+    { time: "02:30 PM", available: true },
+    { time: "03:00 PM", available: true },
+    { time: "03:30 PM", available: true },
 ];
 
 // Helper function to format the date for display
@@ -407,7 +416,11 @@ const Appointments: React.FC = () => {
                                         </div>
                                         <select id="time" value={bookingForm.time} onChange={e => setBookingForm(prev => ({...prev, time: e.target.value}))} required className={`appearance-none block w-full pl-10 pr-10 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-offset-2 ${bookingErrors.time ? 'border-red-500' : 'border-gray-300'} bg-white`}>
                                             <option value="" disabled>Select a time...</option>
-                                            {TIME_SLOTS.map(t => <option key={t} value={t}>{t}</option>)}
+                                            {TIME_SLOTS.map(t => (
+                                                <option key={t.time} value={t.time} disabled={!t.available}>
+                                                    {t.time} {!t.available ? '(Booked)' : ''}
+                                                </option>
+                                            ))}
                                         </select>
                                         <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                                             <ChevronDownIcon className="h-5 w-5 text-gray-400" />

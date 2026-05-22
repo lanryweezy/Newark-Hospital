@@ -32,7 +32,7 @@ const Specialties: React.FC = () => {
                                 {groupedSpecialties[category].map((specialty, index) => (
                                     <AnimatedBlock key={specialty.name} className="reveal" style={{ '--delay': `${index * 100}ms` } as React.CSSProperties}>
                                         <article className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-2 transition-all duration-300 hover:shadow-xl h-full border border-gray-100">
-                                            <img src={specialty.imageUrl} alt={specialty.name} className="w-full h-56 object-cover" />
+                                            <img src={specialty.imageUrl} alt={specialty.name} className="w-full h-56 object-cover" loading="lazy" />
                                             <div className="p-6 flex flex-col flex-grow">
                                                 <div className="flex items-center mb-4">
                                                     <specialty.icon className="h-10 w-10 text-secondary mr-4 flex-shrink-0" />
